@@ -18,6 +18,7 @@ createServer({
           createdAt: new Date() 
         },
         {
+          
           id: 2,
           title: 'Transaction 2',
           amount: 3000,
