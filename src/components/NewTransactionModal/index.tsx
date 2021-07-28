@@ -28,7 +28,7 @@ export function NewTransactionModal(props: NewTransactionModalProps) {
       type
     };
 
-    api.
+    api.post('/transactions', data)
   }
 
   return (
