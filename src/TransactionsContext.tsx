@@ -11,11 +11,11 @@ interface Transaction {
   createdAt: string;
 }
 
+export const TransactionContext = createContext<Transaction[]>([]);
+
 interface TransactionProviderProps {
   children: ReactNode
-} 
-
-export const TransactionContext = createContext<Transaction[]>([]);
+}
 
 export function TransactionProvider(props: TransactionProviderProps){
   const [transactions, setTransaction] = useState<Transaction[]>([])
@@ -31,4 +31,6 @@ export function TransactionProvider(props: TransactionProviderProps){
       {props.children}
     </TransactionContext.Provider>
   )
+
+
 }
